@@ -1,0 +1,15 @@
+spring.application:
+  name: hw2
+
+logging:
+  enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include="*":
+
+info:
+  name: homework-2
+  version: 1.0.0
