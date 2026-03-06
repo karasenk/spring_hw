@@ -11,5 +11,5 @@ management:
         include: "*"
 
 info:
-  name: homework-2
+  name: homework-3
   version: 1.0.0

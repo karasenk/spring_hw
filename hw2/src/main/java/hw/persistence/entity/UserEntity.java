@@ -1,4 +1,4 @@
-package hw2.persistence.entity;
+package hw.persistence.entity;
 
 import lombok.*;
 
@@ -12,5 +12,6 @@ import java.util.UUID;
 public class UserEntity {
     private UUID id;
     private String name;
+    private String password;
 }
 

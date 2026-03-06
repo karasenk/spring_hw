@@ -11,7 +11,7 @@
 	<groupId>com.example</groupId>
 	<artifactId>hw2</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>hw2</name>
+	<name>hw</name>
 	<description>rabotat</description>
 	<url/>
 	<licenses>
@@ -48,6 +48,11 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>at.favre.lib</groupId>
+            <artifactId>bcrypt</artifactId>
+            <version>0.10.2</version>
         </dependency>
 	</dependencies>
 

@@ -1,6 +1,6 @@
-package hw2.persistence.repository;
+package hw.persistence.repository;
 
-import hw2.persistence.entity.UserEntity;
+import hw.persistence.entity.UserEntity;
 import org.springframework.stereotype.Repository;
 
 import java.util.*;
@@ -17,6 +17,7 @@ public class InMemoryRepository {
         Optional.ofNullable(userMap.get(user.getId()))
                 .map(existed -> {
                     existed.setName(user.getName());
+                    existed.setPassword(user.getPassword());
                     return existed;
                 })
                 .orElse(userMap.put(user.getId(), user));

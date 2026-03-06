@@ -1,7 +1,7 @@
-package hw2;
+package hw.api;
 
-import hw2.persistence.entity.UserEntity;
-import hw2.service.UserService;
+import hw.persistence.entity.UserEntity;
+import hw.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -19,8 +19,13 @@ public class UserController {
         return service.get(id);
     }
 
-    @PostMapping
-    public void saveUser(@RequestParam String name) {
-        service.save(name);
+    @GetMapping("/registration")
+    public String getRegistrationForm(){
+        return "registration";
+    }
+
+    @PostMapping("/registration")
+    public void registerUser(@RequestBody String name, @RequestBody String password) {
+        service.register(name, password);
     }
 }
