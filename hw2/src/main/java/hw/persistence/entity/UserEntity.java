@@ -2,7 +2,7 @@ package hw.persistence.entity;
 
 import lombok.*;
 
-import java.util.UUID;
+import java.sql.Date;
 
 @Getter
 @Setter
@@ -10,8 +10,11 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 public class UserEntity {
-    private UUID id;
-    private String name;
+    private Long id;
+    private String nickname;
+    private String email;
+    private String bio;
     private String password;
+    private Date joinDate;
 }
 
