@@ -1,5 +1,6 @@
 package hw.persistence.repository;
 
+import hw.persistence.entity.Status;
 import hw.persistence.entity.UserEntity;
 import lombok.RequiredArgsConstructor;
 import org.springframework.dao.EmptyResultDataAccessException;
@@ -41,6 +42,7 @@ public class JdbcTemplateUserRepository implements UserRepository{
                     (resultSet, rowNum) -> {
                         return new UserEntity(
                                 resultSet.getLong("id"),
+                                resultSet.getObject("status", Status.class),
                                 resultSet.getString("nickname"),
                                 resultSet.getString("bio"),
                                 resultSet.getString("email"),
@@ -64,6 +66,7 @@ public class JdbcTemplateUserRepository implements UserRepository{
                     (resultSet, rowNum) -> {
                         return new UserEntity(
                                 resultSet.getLong("id"),
+                                resultSet.getObject("status", Status.class),
                                 resultSet.getString("nickname"),
                                 resultSet.getString("bio"),
                                 resultSet.getString("email"),

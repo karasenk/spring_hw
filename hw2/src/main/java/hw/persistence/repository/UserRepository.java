@@ -8,6 +8,6 @@ import java.util.UUID;
 public interface UserRepository {
     void create(UserEntity user);
     Optional<UserEntity> getByEmail(String email);
-    Optional<UserEntity> getByNickname(String username);
+    Optional<UserEntity> getByNickname(String nickname);
     void updateBio(UserEntity user);
 }
