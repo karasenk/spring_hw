@@ -1,10 +1,11 @@
 package hw.persistence.repository;
 
 import hw.persistence.entity.UserEntity;
+import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
-import java.util.UUID;
 
+@Repository
 public interface UserRepository {
     void create(UserEntity user);
     Optional<UserEntity> getByEmail(String email);
